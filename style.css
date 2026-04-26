@@ -1,0 +1,645 @@
+/*
+Theme Name: Portfolio Sistemas Rocio
+Theme URI: https://example.com/portfolio-sistemas-rocio
+Author: Rocio Bazan
+Author URI: https://example.com
+Description: Tema de portafolio profesional para Analista de Sistemas, desarrollado con HTML5 semántico y diseño responsive. Ideal para mostrar habilidades técnicas en C#, .NET y SQL Server, así como experiencia en administración escolar y gestión de sistemas.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: portfolio-sistemas
+Tags: portfolio, responsive, custom-header, custom-menu, editor-style, translation-ready
+*/
+
+/* ============================================
+   VARIABLES CSS - Paleta de colores profesional
+   ============================================ */
+:root {
+    /* Colores principales */
+    --color-gris-oscuro: #2C3E50;
+    --color-azul-acero: #34495E;
+    --color-azul-acento: #3498DB;
+    --color-blanco: #FFFFFF;
+    --color-blanco-hueso: #F8F9FA;
+    
+    /* Colores complementarios */
+    --color-texto-principal: #333333;
+    --color-texto-secundario: #666666;
+    --color-borde: #E0E0E0;
+    --color-fondo-seccion: #F5F6F7;
+    
+    /* Espaciado */
+    --espaciado-chico: 10px;
+    --espaciado-medio: 20px;
+    --espaciado-grande: 40px;
+    --espaciado-xl: 60px;
+    
+    /* Transiciones */
+    --transicion-suave: all 0.3s ease;
+}
+
+/* ============================================
+   RESET Y ESTILOS BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto-principal);
+    background-color: var(--color-blanco);
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-medio);
+}
+
+a {
+    color: var(--color-azul-acento);
+    text-decoration: none;
+    transition: var(--transicion-suave);
+}
+
+a:hover {
+    color: var(--color-gris-oscuro);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ============================================
+   HEADER - Cabecera del sitio
+   ============================================ */
+.site-header {
+    background-color: var(--color-gris-oscuro);
+    padding: var(--espaciado-medio) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.site-branding {
+    flex: 1;
+    min-width: 200px;
+}
+
+.site-title a {
+    color: var(--color-blanco);
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-description {
+    color: #BDC3C7;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Navegación principal */
+.main-navigation {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.primary-menu {
+    list-style: none;
+    display: flex;
+    gap: var(--espaciado-medio);
+    flex-wrap: wrap;
+}
+
+.primary-menu li {
+    position: relative;
+}
+
+.primary-menu a {
+    color: var(--color-blanco);
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: var(--transicion-suave);
+}
+
+.primary-menu a:hover {
+    background-color: var(--color-azul-acero);
+    color: var(--color-blanco);
+}
+
+/* ============================================
+   CONTENIDO PRINCIPAL
+   ============================================ */
+.site-main {
+    min-height: calc(100vh - 200px);
+}
+
+/* ============================================
+   SECCIÓN: SKILLS TÉCNICOS
+   ============================================ */
+.skills-section {
+    padding: var(--espaciado-xl) 0;
+    background-color: var(--color-blanco-hueso);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--espaciado-grande);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-azul-acento);
+    margin: 10px auto 0;
+}
+
+.section-subtitle {
+    color: var(--color-texto-secundario);
+    font-size: 1.1rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espaciado-grande);
+}
+
+.skill-card {
+    background-color: var(--color-blanco);
+    padding: var(--espaciado-grande);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: var(--transicion-suave);
+    border-left: 4px solid var(--color-azul-acero);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.skill-icon {
+    margin-bottom: var(--espaciado-medio);
+}
+
+.skill-icon span {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--color-azul-acero);
+    color: var(--color-blanco);
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 6px;
+}
+
+.skill-title {
+    font-size: 1.5rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 10px;
+}
+
+.skill-description {
+    color: var(--color-texto-secundario);
+    margin-bottom: var(--espaciado-medio);
+}
+
+.skill-level {
+    background-color: #E8E8E8;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-azul-acero), var(--color-azul-acento));
+    border-radius: 4px;
+}
+
+/* ============================================
+   SECCIÓN: CONTENIDO DEL BLOG (Loop)
+   ============================================ */
+.content-section {
+    padding: var(--espaciado-xl) 0;
+    background-color: var(--color-blanco);
+}
+
+.blog-post {
+    margin-bottom: var(--espaciado-grande);
+    padding-bottom: var(--espaciado-grande);
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.post-header {
+    margin-bottom: var(--espaciado-medio);
+}
+
+.post-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.post-title a {
+    color: var(--color-gris-oscuro);
+}
+
+.post-title a:hover {
+    color: var(--color-azul-acento);
+}
+
+.post-meta {
+    color: var(--color-texto-secundario);
+    font-size: 0.9rem;
+}
+
+.post-meta span {
+    margin-right: 15px;
+}
+
+.post-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-texto-principal);
+}
+
+.post-footer {
+    margin-top: var(--espaciado-medio);
+}
+
+.post-tags a {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: var(--color-fondo-seccion);
+    color: var(--color-texto-secundario);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+
+.post-tags a:hover {
+    background-color: var(--color-azul-acento);
+    color: var(--color-blanco);
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: var(--espaciado-grande);
+}
+
+.pagination a,
+.pagination span {
+    padding: 10px 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 4px;
+    color: var(--color-gris-oscuro);
+}
+
+.pagination .current {
+    background-color: var(--color-azul-acero);
+    color: var(--color-blanco);
+    border-color: var(--color-azul-acero);
+}
+
+/* ============================================
+   SECCIÓN: EXPERIENCIA PROFESIONAL
+   ============================================ */
+.experience-section {
+    padding: var(--espaciado-xl) 0;
+    background-color: var(--color-blanco-hueso);
+}
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaciado-grande);
+}
+
+.experience-item {
+    display: flex;
+    gap: var(--espaciado-grande);
+    background-color: var(--color-blanco);
+    padding: var(--espaciado-grande);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: var(--transicion-suave);
+}
+
+.experience-item:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.experience-icon {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-azul-acero);
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.experience-content {
+    flex: 1;
+}
+
+.experience-role {
+    font-size: 1.5rem;
+    color: var(--color-gris-oscuro);
+    margin-bottom: 5px;
+}
+
+.experience-company {
+    color: var(--color-azul-acento);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.experience-description {
+    color: var(--color-texto-secundario);
+    margin-bottom: 10px;
+}
+
+.experience-tasks {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-tasks li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 8px;
+    color: var(--color-texto-principal);
+}
+
+.experience-tasks li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-azul-acento);
+    font-weight: bold;
+}
+
+/* ============================================
+   FOOTER - Pie de página
+   ============================================ */
+.site-footer {
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-blanco);
+    padding: var(--espaciado-grande) 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--espaciado-grande);
+    padding-bottom: var(--espaciado-grande);
+}
+
+.footer-section {
+    padding: 0 var(--espaciado-medio);
+}
+
+.footer-title {
+    font-size: 1.25rem;
+    margin-bottom: var(--espaciado-medio);
+    color: var(--color-blanco);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-azul-acento);
+}
+
+.footer-description {
+    color: #BDC3C7;
+    line-height: 1.6;
+}
+
+.footer-menu {
+    list-style: none;
+}
+
+.footer-menu li {
+    margin-bottom: 10px;
+}
+
+.footer-menu a {
+    color: #BDC3C7;
+}
+
+.footer-menu a:hover {
+    color: var(--color-blanco);
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-azul-acero);
+    border-radius: 50%;
+    color: var(--color-blanco);
+    font-size: 1.2rem;
+    transition: var(--transicion-suave);
+}
+
+.social-link:hover {
+    background-color: var(--color-azul-acento);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    background-color: #1A252F;
+    padding: var(--espaciado-medio) 0;
+    text-align: center;
+}
+
+.copyright {
+    color: #BDC3C7;
+    margin-bottom: 5px;
+}
+
+.developer-credit {
+    color: #7F8C8D;
+    font-size: 0.85rem;
+}
+
+.developer-credit a {
+    color: #BDC3C7;
+}
+
+/* ============================================
+   DISEÑO RESPONSIVE
+   ============================================ */
+@media screen and (max-width: 768px) {
+    /* Header responsive */
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .site-branding {
+        margin-bottom: var(--espaciado-medio);
+    }
+    
+    .main-navigation {
+        justify-content: center;
+    }
+    
+    .primary-menu {
+        justify-content: center;
+    }
+    
+    /* Títulos responsive */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .post-title {
+        font-size: 1.5rem;
+    }
+    
+    /* Skills responsive */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Experiencia responsive */
+    .experience-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .experience-icon {
+        margin: 0 auto;
+    }
+    
+    .experience-tasks li {
+        text-align: left;
+    }
+    
+    /* Footer responsive */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --espaciado-xl: 40px;
+        --espaciado-grande: 30px;
+    }
+    
+    .site-title a {
+        font-size: 1.5rem;
+    }
+    
+    .skill-card {
+        padding: var(--espaciado-medio);
+    }
+    
+    .experience-item {
+        padding: var(--espaciado-medio);
+    }
+}
+
+/* ============================================
+   ESTILOS DE ACCESIBILIDAD
+   ============================================ */
+.screen-reader-text {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+:focus {
+    outline: 2px solid var(--color-azul-acento);
+    outline-offset: 2px;
+}
+
+/* Skip link para navegación */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--color-azul-acento);
+    color: var(--color-blanco);
+    padding: 8px 15px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+
+.skip-link:focus {
+    top: 0;
+}
