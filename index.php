@@ -1,11 +1,11 @@
 <?php
 /**
- * Index del tema - Plantilla principal
+ * Index del tema - Plantilla principal del portafolio
  * 
- * Este archivo contiene el Loop de WordPress y las dos secciones
- * principales de contenido: Skills Técnicos y Experiencia Profesional.
+ * Este archivo contiene el Loop de WordPress y las secciones
+ * principales de contenido: Hero, Perfil Técnico y Experiencia Laboral.
  * 
- * @package Portfolio Sistemas Rocio
+ * @package Portfolio Rocío Bazán
  * @subpackage Templates
  */
 
@@ -16,59 +16,237 @@ if (!defined('ABSPATH')) {
 
 <?php get_header(); ?>
 
-    <!-- Sección: Skills Técnicos -->
+    <!-- Contenido principal del sitio -->
+    <main class="site-main" role="main">
+
+    <!-- SECCIÓN HERO - Presentación principal -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-badge">Analista de Sistemas</span>
+                <h1 class="hero-title"><?php _e('Rocío Bazán', 'portfolio-rocio'); ?></h1>
+                <p class="hero-subtitle"><?php _e('Estudiante avanzada de Analista de Sistemas | Desarrollador C# Junior | .NET Core, MVC & Entity Framework', 'portfolio-rocio'); ?></p>
+                <p class="hero-description">
+                    <?php _e('Desarrolladora junior con sólida formación en tecnologías .NET, programación orientada a objetos y gestión de bases de datos SQL Server. Passion por crear soluciones tecnológicas eficientes y escalables.', 'portfolio-rocio'); ?>
+                </p>
+                <div class="hero-cta">
+                    <a href="#skills" class="btn btn-primary"><?php _e('Ver Skills', 'portfolio-rocio'); ?></a>
+                    <a href="#experience" class="btn btn-secondary"><?php _e('Experiencia', 'portfolio-rocio'); ?></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN 1: PERFIL TÉCNICO - Stack Tecnológico -->
     <section class="skills-section" id="skills">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"><?php _e('Skills Técnicos', 'portfolio-sistemas'); ?></h2>
-                <p class="section-subtitle"><?php _e('Technologies and tools I work with', 'portfolio-sistemas'); ?></p>
+                <h2 class="section-title"><?php _e('Perfil Técnico', 'portfolio-rocio'); ?></h2>
+                <p class="section-subtitle"><?php _e('Stack tecnológico y competencias especializadas', 'portfolio-rocio'); ?></p>
             </div>
             
             <div class="skills-grid">
-                <!-- Skill: C# -->
+                <!-- Lenguajes de Programación -->
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <span class="skill-icon-csharp">C#</span>
+                    <div class="skill-header">
+                        <div class="skill-icon">C#</div>
+                        <h3 class="skill-title"><?php _e('C#', 'portfolio-rocio'); ?></h3>
                     </div>
-                    <h3 class="skill-title">C#</h3>
-                    <p class="skill-description"><?php _e('Desarrollo de aplicaciones robustas con .NET Framework y .NET Core', 'portfolio-sistemas'); ?></p>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 90%;"></div>
+                    <p class="skill-description"><?php _e('Desarrollo de aplicaciones robustas con .NET Framework y .NET Core. Programación orientada a objetos, APIs REST y servicios Windows.', 'portfolio-rocio'); ?></p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">POO</span>
+                        <span class="skill-tag">LINQ</span>
+                        <span class="skill-tag">Async/Await</span>
                     </div>
                 </div>
                 
-                <!-- Skill: .NET -->
+                <!-- Frameworks .NET -->
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <span class="skill-icon-dotnet">.NET</span>
+                    <div class="skill-header">
+                        <div class="skill-icon">.NET</div>
+                        <h3 class="skill-title"><?php _e('.NET Core & Framework', 'portfolio-rocio'); ?></h3>
                     </div>
-                    <h3 class="skill-title">.NET</h3>
-                    <p class="skill-description"><?php _e('Desarrollo web y de escritorio con ASP.NET, WPF y Windows Forms', 'portfolio-sistemas'); ?></p>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 85%;"></div>
+                    <p class="skill-description"><?php _e('Desarrollo web y de escritorio con ASP.NET Core, MVC, Web API y aplicaciones Windows Forms. Integración con bases de datos.', 'portfolio-rocio'); ?></p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ASP.NET Core</span>
+                        <span class="skill-tag">MVC</span>
+                        <span class="skill-tag">Web API</span>
                     </div>
                 </div>
                 
-                <!-- Skill: SQL Server -->
+                <!-- Entity Framework -->
                 <div class="skill-card">
-                    <div class="skill-icon">
-                        <span class="skill-icon-sql">SQL</span>
+                    <div class="skill-header">
+                        <div class="skill-icon">EF</div>
+                        <h3 class="skill-title"><?php _e('Entity Framework', 'portfolio-rocio'); ?></h3>
                     </div>
-                    <h3 class="skill-title">SQL Server</h3>
-                    <p class="skill-description"><?php _e('Diseño de bases de datos, consultas T-SQL y administración de servidores', 'portfolio-sistemas'); ?></p>
-                    <div class="skill-level">
-                        <div class="skill-progress" style="width: 88%;"></div>
+                    <p class="skill-description"><?php _e('ORM para acceso a datos, Code First, migrations, consultas LINQ y gestión de entidades en aplicaciones .NET.', 'portfolio-rocio'); ?></p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Code First</span>
+                        <span class="skill-tag">Migrations</span>
+                        <span class="skill-tag">LINQ to Entities</span>
+                    </div>
+                </div>
+                
+                <!-- SQL Server -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">SQL</div>
+                        <h3 class="skill-title"><?php _e('SQL Server', 'portfolio-rocio'); ?></h3>
+                    </div>
+                    <p class="skill-description"><?php _e('Diseño y administración de bases de datos. Consultas T-SQL, procedimientos almacenados, triggers y optimización.', 'portfolio-rocio'); ?></p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">T-SQL</span>
+                        <span class="skill-tag">Stored Procedures</span>
+                        <span class="skill-tag">Triggers</span>
+                    </div>
+                </div>
+                
+                <!-- Frontend -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">FE</div>
+                        <h3 class="skill-title"><?php _e('Frontend', 'portfolio-rocio'); ?></h3>
+                    </div>
+                    <p class="skill-description"><?php _e('Desarrollo de interfaces modernas con HTML5, CSS3, JavaScript y Bootstrap. Diseño responsive y accesible.', 'portfolio-rocio'); ?></p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Bootstrap</span>
+                    </div>
+                </div>
+                
+                <!-- Herramientas -->
+                <div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-icon">GH</div>
+                        <h3 class="skill-title"><?php _e('Herramientas', 'portfolio-rocio'); ?></h3>
+                    </div>
+                    <p class="skill-description"><?php _e('Control de versiones con Git y GitHub. Análisis de requerimientos y reglas de negocio. Metodologías ágiles.', 'portfolio-rocio'); ?></p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">UML</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Loop de WordPress: Sección de contenido dinámico -->
+    <!-- SECCIÓN 2: EXPERIENCIA LABORAL -->
+    <section class="experience-section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><?php _e('Experiencia Laboral', 'portfolio-rocio'); ?></h2>
+                <p class="section-subtitle"><?php _e('Trayectoria profesional en gestión técnica y administrativa', 'portfolio-rocio'); ?></p>
+            </div>
+            
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="experience-date"><?php _e('Febrero 2025 - Actualidad', 'portfolio-rocio'); ?></div>
+                    <div class="experience-content">
+                        <h3 class="experience-title"><?php _e('Administradora', 'portfolio-rocio'); ?></h3>
+                        <p class="experience-company"><?php _e('Instituto Industrial Cristo Obrero', 'portfolio-rocio'); ?></p>
+                        <ul class="experience-tasks">
+                            <li><?php _e('Gestionar el cobro de cuotas y la carga de pagos en el sistema', 'portfolio-rocio'); ?></li>
+                            <li><?php _e('Administrar compras y presupuestos de materiales técnicos para las distintas áreas de la institución', 'portfolio-rocio'); ?></li>
+                            <li><?php _e('Actuar como nexo con el proveedor del software de gestión para reportar fallas o pedir cambios que mejoren nuestro trabajo', 'portfolio-rocio'); ?></li>
+                            <li><?php _e('Controlar y rendir los fondos fijos destinados a los gastos diarios de las áreas de mantenimiento y taller', 'portfolio-rocio'); ?></li>
+                            <li><?php _e('Asistir en la atención de familias, participando en la negociación de acuerdos de pago y en la gestión de becas', 'portfolio-rocio'); ?></li>
+                            <li><?php _e('Colaborar en la gestión de registros administrativos y financieros, garantizando el cumplimiento de las normativas vigentes ante auditorías y entidades externas', 'portfolio-rocio'); ?></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: EDUCACIÓN -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><?php _e('Educación', 'portfolio-rocio'); ?></h2>
+                <p class="section-subtitle"><?php _e('Formación académica y certificaciónes', 'portfolio-rocio'); ?></p>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3 class="education-title"><?php _e('Analista de Sistemas', 'portfolio-rocio'); ?></h3>
+                    <p class="education-institution"><?php _e('Instituto Remedios Escalada de San Martín', 'portfolio-rocio'); ?></p>
+                    <p class="education-period"><?php _e('2024 - Actualidad', 'portfolio-rocio'); ?></p>
+                    <p class="education-details"><?php _e('Materias aprobadas: 29/38', 'portfolio-rocio'); ?></p>
+                </div>
+                
+                <div class="education-card">
+                    <h3 class="education-title"><?php _e('Técnico Superior en Administración de Empresas', 'portfolio-rocio'); ?></h3>
+                    <p class="education-institution"><?php _e('Instituto Remedios Escalada de San Martín', 'portfolio-rocio'); ?></p>
+                    <p class="education-period"><?php _e('2017 - 2019', 'portfolio-rocio'); ?></p>
+                    <p class="education-details"><?php _e('Graduada', 'portfolio-rocio'); ?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CURSOS -->
+    <section class="courses-section" id="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title"><?php _e('Cursos y Capacitaciones', 'portfolio-rocio'); ?></h2>
+                <p class="section-subtitle"><?php _e('Formación técnica complementaria', 'portfolio-rocio'); ?></p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h4 class="course-name"><?php _e('Programación C# Nivel 4: MVC + EF', 'portfolio-rocio'); ?></h4>
+                    <p class="course-provider"><?php _e('Maxiprograma.com', 'portfolio-rocio'); ?></p>
+                    <p class="course-period"><?php _e('Febrero 2026 - Mayo 2026', 'portfolio-rocio'); ?></p>
+                </div>
+                
+                <div class="course-card">
+                    <h4 class="course-name"><?php _e('Curso de Bases de Datos', 'portfolio-rocio'); ?></h4>
+                    <p class="course-provider"><?php _e('Maxiprograma.com', 'portfolio-rocio'); ?></p>
+                    <p class="course-period"><?php _e('Julio 2024 - Agosto 2024', 'portfolio-rocio'); ?></p>
+                </div>
+                
+                <div class="course-card">
+                    <h4 class="course-name"><?php _e('Programación C# Nivel 3: Web ASP.NET', 'portfolio-rocio'); ?></h4>
+                    <p class="course-provider"><?php _e('Maxiprograma.com', 'portfolio-rocio'); ?></p>
+                    <p class="course-period"><?php _e('Noviembre 2023 - Febrero 2024', 'portfolio-rocio'); ?></p>
+                </div>
+                
+                <div class="course-card">
+                    <h4 class="course-name"><?php _e('Programación C# Nivel 2: POO + .Net + SQL', 'portfolio-rocio'); ?></h4>
+                    <p class="course-provider"><?php _e('Maxiprograma.com', 'portfolio-rocio'); ?></p>
+                    <p class="course-period"><?php _e('Agosto 2023 - Octubre 2023', 'portfolio-rocio'); ?></p>
+                </div>
+                
+                <div class="course-card">
+                    <h4 class="course-name"><?php _e('Programación C# Nivel 1', 'portfolio-rocio'); ?></h4>
+                    <p class="course-provider"><?php _e('Maxiprograma.com', 'portfolio-rocio'); ?></p>
+                    <p class="course-period"><?php _e('Agosto 2023', 'portfolio-rocio'); ?></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loop de WordPress: Contenido dinámico del blog -->
     <section class="content-section" id="blog">
         <div class="container">
             <?php
-            // El Loop de WordPress: paradigma funcional y orientado a eventos
+            /**
+             * El Loop de WordPress: paradigma funcional y orientado a eventos
+             * 
+             * Este loop implementa el patrón de iteración estándar de WordPress:
+             * - have_posts(): función que verifica si hay posts disponibles
+             * - the_post(): carga el post actual en las variables globales
+             * - the_title(), the_content(): funciones de template para mostrar datos
+             * 
+             * Hooks relacionados:
+             * - pre_get_posts: modifica la query antes de ejecutarse
+             * - the_post: acción que se ejecuta por cada post
+             * - wp_enqueue_scripts: para cargar scripts en el frontend
+             */
             if (have_posts()) :
                 while (have_posts()) : the_post();
             ?>
@@ -81,14 +259,14 @@ if (!defined('ABSPATH')) {
                             </h2>
                             <div class="post-meta">
                                 <span class="post-date"><?php echo get_the_date(); ?></span>
-                                <span class="post-author"><?php _e('by', 'portfolio-sistemas'); ?> <?php the_author(); ?></span>
+                                <span class="post-author"><?php _e('por', 'portfolio-rocio'); ?> <?php the_author(); ?></span>
                             </div>
                         </header>
                         
                         <div class="post-content">
                             <?php
                             // Función estándar: the_content() - muestra el contenido del post
-                            the_content(__('Continue reading', 'portfolio-sistemas'));
+                            the_content(__('Continuar leyendo', 'portfolio-rocio'));
                             ?>
                         </div>
                         
@@ -112,69 +290,19 @@ if (!defined('ABSPATH')) {
                 // Paginación del Loop
                 the_posts_pagination(array(
                     'mid_size'  => 2,
-                    'prev_text' => __('&laquo; Anterior', 'portfolio-sistemas'),
-                    'next_text' => __('Siguiente &raquo;', 'portfolio-sistemas'),
+                    'prev_text' => __('&laquo; Anterior', 'portfolio-rocio'),
+                    'next_text' => __('Siguiente &raquo;', 'portfolio-rocio'),
                 ));
                 
             else :
             ?>
                 <div class="no-content">
-                    <p><?php _e('No se encontró contenido.', 'portfolio-sistemas'); ?></p>
+                    <p><?php _e('No se encontró contenido.', 'portfolio-rocio'); ?></p>
                 </div>
             <?php endif; ?>
         </div>
     </section>
 
-    <!-- Sección: Experiencia Profesional -->
-    <section class="experience-section" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title"><?php _e('Experiencia Profesional', 'portfolio-sistemas'); ?></h2>
-                <p class="section-subtitle"><?php _e('My professional background in system administration', 'portfolio-sistemas'); ?></p>
-            </div>
-            
-            <div class="experience-timeline">
-                <!-- Experiencia: Administración Escolar -->
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <span class="icon-school">🎓</span>
-                    </div>
-                    <div class="experience-content">
-                        <h3 class="experience-role"><?php _e('Administración Escolar', 'portfolio-sistemas'); ?></h3>
-                        <p class="experience-company"><?php _e('Institución Educativa', 'portfolio-sistemas'); ?></p>
-                        <p class="experience-description">
-                            <?php _e('Gestión integral de procesos administrativos escolares, incluyendo:', 'portfolio-sistemas'); ?>
-                        </p>
-                        <ul class="experience-tasks">
-                            <li><?php _e('Control de inscripciones y matriculación de estudiantes', 'portfolio-sistemas'); ?></li>
-                            <li><?php _e('Gestión de calificaciones y reportes académicos', 'portfolio-sistemas'); ?></li>
-                            <li><?php _e('Administración de personal docente y administrativo', 'portfolio-sistemas'); ?></li>
-                            <li><?php _e('Coordinación de horarios y asignación de aulas', 'portfolio-sistemas'); ?></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Experiencia: Gestión de Sistemas -->
-                <div class="experience-item">
-                    <div class="experience-icon">
-                        <span class="icon-systems">💻</span>
-                    </div>
-                    <div class="experience-content">
-                        <h3 class="experience-role"><?php _e('Gestión de Sistemas', 'portfolio-sistemas'); ?></h3>
-                        <p class="experience-company"><?php _e('Departamento de Tecnología', 'portfolio-sistemas'); ?></p>
-                        <p class="experience-description">
-                            <?php _e('Administración y mantenimiento de infraestructura tecnológica:', 'portfolio-sistemas'); ?>
-                        </p>
-                        <ul class="experience-tasks">
-                            <li><?php _e('Mantenimiento de bases de datos SQL Server', 'portfolio-sistemas'); ?></li>
-                            <li><?php _e('Desarrollo de aplicaciones internas en C#/.NET', 'portfolio-sistemas'); ?></li>
-                            <li><?php _e('Gestión de redes y soporte técnico', 'portfolio-sistemas'); ?></li>
-                            <li><?php _e('Implementación de políticas de seguridad informática', 'portfolio-sistemas'); ?></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</main><!-- .site-main -->
 
-<?php get_footer();
+<?php get_footer(); ?>
