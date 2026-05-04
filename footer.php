@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
                     <div class="footer-section about">
                         <h3 class="footer-title"><?php _e('Sobre Mí', 'portfolio-rocio'); ?></h3>
                         <p class="footer-description">
-                            <?php _e('Analista de Sistemas en formación con experiencia en desarrollo .NET, programación C#, administración de bases de datos SQL Server y gestión de sistemas administrativos.', 'portfolio-rocio'); ?>
+                            <?php _e('Analista de Sistemas en formación con experiencia en desarrollo .NET, programación C# y administración de bases de datos SQL Server.', 'portfolio-rocio'); ?>
                         </p>
                     </div>
                     

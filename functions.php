@@ -52,7 +52,7 @@ function portfolio_rocio_enqueue_scripts() {
         'portfolio-rocio-style',
         get_stylesheet_uri(),
         array(),
-        '4.0.0'
+        '5.0.3'
     );
     
     // Carga Google Fonts (Inter)

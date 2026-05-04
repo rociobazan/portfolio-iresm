@@ -23,11 +23,11 @@ if (!defined('ABSPATH')) {
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-badge">Analista de Sistemas</span>
+                <span class="hero-badge">Estudiante avanzada de análisis de sistemas</span>
                 <h1 class="hero-title"><?php _e('Rocío Bazán', 'portfolio-rocio'); ?></h1>
                 <p class="hero-subtitle"><?php _e('Estudiante avanzada de Analista de Sistemas | Desarrollador C# Junior | .NET Core, MVC & Entity Framework', 'portfolio-rocio'); ?></p>
                 <p class="hero-description">
-                    <?php _e('Desarrolladora junior con sólida formación en tecnologías .NET, programación orientada a objetos y gestión de bases de datos SQL Server. Passion por crear soluciones tecnológicas eficientes y escalables.', 'portfolio-rocio'); ?>
+                    <?php _e('Desarrolladora junior con sólida formación en tecnologías .NET, programación orientada a objetos y gestión de bases de datos SQL Server. Enfocada en el análisis detallado de requerimientos y el diseño lógico de soluciones funcionales adaptadas a las necesidades del negocio.', 'portfolio-rocio'); ?>
                 </p>
                 <div class="hero-cta">
                     <a href="#skills" class="btn btn-primary"><?php _e('Ver Skills', 'portfolio-rocio'); ?></a>
@@ -52,11 +52,11 @@ if (!defined('ABSPATH')) {
                         <div class="skill-icon">C#</div>
                         <h3 class="skill-title"><?php _e('C#', 'portfolio-rocio'); ?></h3>
                     </div>
-                    <p class="skill-description"><?php _e('Desarrollo de aplicaciones robustas con .NET Framework y .NET Core. Programación orientada a objetos, APIs REST y servicios Windows.', 'portfolio-rocio'); ?></p>
+                    <p class="skill-description"><?php _e('Desarrollo de aplicaciones robustas con .NET Framework y .NET Core. Implementación profunda de POO. Creación de aplicaciones de escritorio interactivas utilizando WinForms', 'portfolio-rocio'); ?></p>
                     <div class="skill-tags">
                         <span class="skill-tag">POO</span>
-                        <span class="skill-tag">LINQ</span>
-                        <span class="skill-tag">Async/Await</span>
+                        <span class="skill-tag">WinForms</span>
+                        <span class="skill-tag">Lógica de programación</span>
                     </div>
                 </div>
                 
@@ -66,11 +66,14 @@ if (!defined('ABSPATH')) {
                         <div class="skill-icon">.NET</div>
                         <h3 class="skill-title"><?php _e('.NET Core & Framework', 'portfolio-rocio'); ?></h3>
                     </div>
-                    <p class="skill-description"><?php _e('Desarrollo web y de escritorio con ASP.NET Core, MVC, Web API y aplicaciones Windows Forms. Integración con bases de datos.', 'portfolio-rocio'); ?></p>
+                    <p class="skill-description"><?php _e('Desarrollo web y de escritorio con ASP.NET Core, MVC, WebForms y aplicaciones Windows Forms. Implementación de arquitecturas en capas para una integración eficiente con bases de datos.', 'portfolio-rocio'); ?></p>
                     <div class="skill-tags">
                         <span class="skill-tag">ASP.NET Core</span>
                         <span class="skill-tag">MVC</span>
+                        <span class="skill-tag">WebForms</span>
+                        <span class="skill-tag">Windows Forms</span>
                         <span class="skill-tag">Web API</span>
+                        <span class="skill-tag">Arquitectura en capas</span>
                     </div>
                 </div>
                 
@@ -80,11 +83,11 @@ if (!defined('ABSPATH')) {
                         <div class="skill-icon">EF</div>
                         <h3 class="skill-title"><?php _e('Entity Framework', 'portfolio-rocio'); ?></h3>
                     </div>
-                    <p class="skill-description"><?php _e('ORM para acceso a datos, Code First, migrations, consultas LINQ y gestión de entidades en aplicaciones .NET.', 'portfolio-rocio'); ?></p>
+                    <p class="skill-description"><?php _e('Utilización de ORM para la persistencia y acceso a datos. Creación y modelado de clases, configuración de contexto y control de versiones de la base de datos a través de migraciones. Implementación de Fluent API y carga inicial de datos (Seeding)', 'portfolio-rocio'); ?></p>
                     <div class="skill-tags">
-                        <span class="skill-tag">Code First</span>
+                        <span class="skill-tag">Modelado de clases</span>
                         <span class="skill-tag">Migrations</span>
-                        <span class="skill-tag">LINQ to Entities</span>
+                        <span class="skill-tag">Fluent API</span>
                     </div>
                 </div>
                 
@@ -108,12 +111,13 @@ if (!defined('ABSPATH')) {
                         <div class="skill-icon">FE</div>
                         <h3 class="skill-title"><?php _e('Frontend', 'portfolio-rocio'); ?></h3>
                     </div>
-                    <p class="skill-description"><?php _e('Desarrollo de interfaces modernas con HTML5, CSS3, JavaScript y Bootstrap. Diseño responsive y accesible.', 'portfolio-rocio'); ?></p>
+                    <p class="skill-description"><?php _e('Desarrollo de interfaces dinámicas con motor de vistas Razor, integrando HTML5, CSS3, JavaScript y Bootstrap. Diseño responsive enfocado en la funcionalidad y la experiencia de usuario', 'portfolio-rocio'); ?></p>
                     <div class="skill-tags">
                         <span class="skill-tag">HTML5</span>
                         <span class="skill-tag">CSS3</span>
                         <span class="skill-tag">JavaScript</span>
                         <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Razor</span>
                     </div>
                 </div>
                 
@@ -139,7 +143,6 @@ if (!defined('ABSPATH')) {
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title"><?php _e('Experiencia Laboral', 'portfolio-rocio'); ?></h2>
-                <p class="section-subtitle"><?php _e('Trayectoria profesional en gestión técnica y administrativa', 'portfolio-rocio'); ?></p>
             </div>
             
             <div class="experience-timeline">
@@ -154,7 +157,7 @@ if (!defined('ABSPATH')) {
                             <li><?php _e('Actuar como nexo con el proveedor del software de gestión para reportar fallas o pedir cambios que mejoren nuestro trabajo', 'portfolio-rocio'); ?></li>
                             <li><?php _e('Controlar y rendir los fondos fijos destinados a los gastos diarios de las áreas de mantenimiento y taller', 'portfolio-rocio'); ?></li>
                             <li><?php _e('Asistir en la atención de familias, participando en la negociación de acuerdos de pago y en la gestión de becas', 'portfolio-rocio'); ?></li>
-                            <li><?php _e('Colaborar en la gestión de registros administrativos y financieros, garantizando el cumplimiento de las normativas vigentes ante auditorías y entidades externas', 'portfolio-rocio'); ?></li>
+                            <li><?php _e('Colaborar en la gestión de registros administrativos y financieros, garantizando el cumplimiento de las normativas vigentes ante entidades externas', 'portfolio-rocio'); ?></li>
                         </ul>
                     </div>
                 </div>
@@ -231,7 +234,7 @@ if (!defined('ABSPATH')) {
     </section>
 
     <!-- Loop de WordPress: Contenido dinámico del blog -->
-    <section class="content-section" id="blog">
+    <!-- <section class="content-section" id="blog">
         <div class="container">
             <?php
             /**
@@ -301,7 +304,7 @@ if (!defined('ABSPATH')) {
                 </div>
             <?php endif; ?>
         </div>
-    </section>
+    </section> -->
 
 </main><!-- .site-main -->
 
